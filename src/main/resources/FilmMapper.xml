@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.github.ctlove0523.mybatis.started.mapper.FilmMapper">
+    <resultMap id="filmResultMap" type="Film">
+        <id property="film_id" column="film_id" />
+        <result property="title" column="title"/>
+        <result property="description" column="description"/>
+        <result property="release_year" column="release_year"/>
+        <result property="language_id" column="language_id"/>
+        <result property="original_language_id" column="original_language_id"/>
+        <result property="rental_duration" column="rental_duration"/>
+        <result property="rental_rate" column="rental_rate"/>
+        <result property="length" column="length"/>
+        <result property="replacement_cost" column="replacement_cost"/>
+        <result property="rating" column="rating" typeHandler="io.github.ctlove0523.mybatis.started.handlers.FilmRatingHandler"/>
+        <result property="lastUpdate" column="last_update"/>
+        <collection property="special_features" ofType="java.lang.String">
+            <constructor>
+                <arg column="special_features"/>
+            </constructor>
+        </collection>
+    </resultMap>
+
+    <select id="selectFilm" parameterType="int" resultMap="filmResultMap">
+        select * from film where film_id = #{id}
+    </select>
+</mapper>
