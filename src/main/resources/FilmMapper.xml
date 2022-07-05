@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="io.github.ctlove0523.mybatis.started.mapper.FilmMapper">
+<mapper namespace="io.github.ctlove0523.mybatis.started.mapper1.FilmMapper">
     <resultMap id="filmResultMap" type="Film">
         <id property="film_id" column="film_id" />
         <result property="title" column="title"/>

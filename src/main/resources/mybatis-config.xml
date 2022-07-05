@@ -26,16 +26,16 @@
     </settings>
 
     <typeAliases>
-        <typeAlias alias="Address" type="io.github.ctlove0523.mybatis.started.model.Address"/>
-        <typeAlias alias="Actor" type="io.github.ctlove0523.mybatis.started.model.Actor"/>
-        <typeAlias alias="Category" type="io.github.ctlove0523.mybatis.started.model.Category"/>
-        <typeAlias alias="City" type="io.github.ctlove0523.mybatis.started.model.City"/>
-        <typeAlias alias="Country" type="io.github.ctlove0523.mybatis.started.model.Country"/>
-        <typeAlias alias="Film" type="io.github.ctlove0523.mybatis.started.model.Film"/>
+        <typeAlias alias="Address" type="io.github.ctlove0523.mybatis.started.entity.Address"/>
+        <typeAlias alias="Actor" type="io.github.ctlove0523.mybatis.started.entity.Actor"/>
+        <typeAlias alias="Category" type="io.github.ctlove0523.mybatis.started.entity.Category"/>
+        <typeAlias alias="City" type="io.github.ctlove0523.mybatis.started.entity.City"/>
+        <typeAlias alias="Country" type="io.github.ctlove0523.mybatis.started.entity.Country"/>
+        <typeAlias alias="Film" type="io.github.ctlove0523.mybatis.started.entity.Film"/>
     </typeAliases>
     <typeHandlers>
         <typeHandler handler="io.github.ctlove0523.mybatis.started.handlers.FilmRatingHandler"
-                     javaType="io.github.ctlove0523.mybatis.started.model.FileRating"/>
+                     javaType="io.github.ctlove0523.mybatis.started.handlers.FileRating"/>
     </typeHandlers>
 
     <environments default="development">
@@ -50,11 +50,6 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="ActorMapper.xml"/>
-        <mapper resource="AddressMapper.xml"/>
-        <mapper resource="CategoryMapper.xml"/>
-        <mapper resource="CityMapper.xml"/>
-        <mapper resource="CountryMapper.xml"/>
-        <mapper resource="FilmMapper.xml"/>
+        <mapper resource="mapper/ActorMapper.xml"/>
     </mappers>
 </configuration>

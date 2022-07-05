@@ -1,6 +1,5 @@
 package io.github.ctlove0523.mybatis.started.handlers;
 
-import io.github.ctlove0523.mybatis.started.model.FileRating;
 import org.apache.ibatis.type.BaseTypeHandler;
 import org.apache.ibatis.type.JdbcType;
 

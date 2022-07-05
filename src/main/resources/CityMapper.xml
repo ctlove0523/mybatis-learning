@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="io.github.ctlove0523.mybatis.started.mapper.CityMapper">
+<mapper namespace="io.github.ctlove0523.mybatis.started.mapper1.CityMapper">
     <resultMap id="cityResultMap" type="City">
         <id property="cityId" column="city_id"/>
         <result property="name" column="name"/>
