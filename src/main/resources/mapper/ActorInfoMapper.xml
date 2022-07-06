@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="io.github.ctlove0523.mybatis.started.mapper.ActorInfoMapper">
+    <resultMap id="actorInfoResultMap" type="ActorInfo">
+        <result property="actorId" column="actor_id"/>
+        <result property="firstName" column="first_name"/>
+        <result property="lastName" column="last_name"/>
+        <result property="filmInfo" column="film_info"/>
+    </resultMap>
 
+    <select id="selectActorInfo" parameterType="int" resultMap="actorInfoResultMap">
+        SELECT * FROM actor_info WHERE actor_id=#{id}
+    </select>
 </mapper>

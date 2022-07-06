@@ -26,8 +26,9 @@
     </settings>
 
     <typeAliases>
+        <typeAlias type="io.github.ctlove0523.mybatis.started.entity.Actor" alias="Actor"/>
+        <typeAlias type="io.github.ctlove0523.mybatis.started.entity.ActorInfo" alias="ActorInfo"/>
         <typeAlias alias="Address" type="io.github.ctlove0523.mybatis.started.entity.Address"/>
-        <typeAlias alias="Actor" type="io.github.ctlove0523.mybatis.started.entity.Actor"/>
         <typeAlias alias="Category" type="io.github.ctlove0523.mybatis.started.entity.Category"/>
         <typeAlias alias="City" type="io.github.ctlove0523.mybatis.started.entity.City"/>
         <typeAlias alias="Country" type="io.github.ctlove0523.mybatis.started.entity.Country"/>
@@ -51,5 +52,7 @@
     </environments>
     <mappers>
         <mapper resource="mapper/ActorMapper.xml"/>
+        <mapper resource="mapper/ActorInfoMapper.xml"/>
+        <mapper resource="mapper/FilmMapper.xml"/>
     </mappers>
 </configuration>

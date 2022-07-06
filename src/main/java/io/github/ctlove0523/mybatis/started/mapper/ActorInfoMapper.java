@@ -1,7 +1,6 @@
 package io.github.ctlove0523.mybatis.started.mapper;
 
 import io.github.ctlove0523.mybatis.started.entity.ActorInfo;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * <p>
@@ -11,6 +10,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author ctlove0523
  * @since 2022-07-05
  */
-public interface ActorInfoMapper extends BaseMapper<ActorInfo> {
+public interface ActorInfoMapper {
 
+    ActorInfo selectActorInfo(Integer actorId);
 }

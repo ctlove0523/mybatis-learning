@@ -4,15 +4,18 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.time.Year;
+import io.github.ctlove0523.mybatis.started.handlers.FileRating;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.time.Year;
+import java.util.List;
+
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author ctlove0523
@@ -54,10 +57,10 @@ public class Film {
     private BigDecimal replacementCost;
 
     @TableField("rating")
-    private String rating;
+    private FileRating rating;
 
     @TableField("special_features")
-    private String specialFeatures;
+    private List<String> specialFeatures;
 
     @TableField("last_update")
     private LocalDateTime lastUpdate;

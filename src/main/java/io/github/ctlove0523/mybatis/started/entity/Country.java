@@ -29,6 +29,4 @@ public class Country {
 
     @TableField("last_update")
     private LocalDateTime lastUpdate;
-
-
 }

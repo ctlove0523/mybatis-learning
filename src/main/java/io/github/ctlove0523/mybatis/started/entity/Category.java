@@ -29,6 +29,4 @@ public class Category {
 
     @TableField("last_update")
     private LocalDateTime lastUpdate;
-
-
 }

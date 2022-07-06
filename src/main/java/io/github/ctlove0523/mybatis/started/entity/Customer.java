@@ -48,5 +48,4 @@ public class Customer {
     @TableField("last_update")
     private LocalDateTime lastUpdate;
 
-
 }

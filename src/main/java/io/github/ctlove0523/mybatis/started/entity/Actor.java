@@ -33,5 +33,4 @@ public class Actor {
     @TableField("last_update")
     private LocalDateTime lastUpdate;
 
-
 }

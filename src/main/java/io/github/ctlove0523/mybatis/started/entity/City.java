@@ -33,5 +33,4 @@ public class City {
     @TableField("last_update")
     private LocalDateTime lastUpdate;
 
-
 }
