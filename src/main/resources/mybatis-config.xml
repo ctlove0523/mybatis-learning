@@ -33,6 +33,7 @@
         <typeAlias alias="City" type="io.github.ctlove0523.mybatis.started.entity.City"/>
         <typeAlias alias="Country" type="io.github.ctlove0523.mybatis.started.entity.Country"/>
         <typeAlias alias="Film" type="io.github.ctlove0523.mybatis.started.entity.Film"/>
+        <typeAlias alias="Inventory" type="io.github.ctlove0523.mybatis.started.entity.Inventory"/>
     </typeAliases>
     <typeHandlers>
         <typeHandler handler="io.github.ctlove0523.mybatis.started.handlers.FilmRatingHandler"
@@ -54,5 +55,7 @@
         <mapper resource="mapper/ActorMapper.xml"/>
         <mapper resource="mapper/ActorInfoMapper.xml"/>
         <mapper resource="mapper/FilmMapper.xml"/>
+        <mapper resource="mapper/CityMapper.xml"/>
+        <mapper resource="mapper/InventoryMapper.xml"/>
     </mappers>
 </configuration>

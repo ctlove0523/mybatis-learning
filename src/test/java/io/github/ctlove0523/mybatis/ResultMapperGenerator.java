@@ -2,7 +2,7 @@ package io.github.ctlove0523.mybatis;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
-import io.github.ctlove0523.mybatis.started.entity.City;
+import io.github.ctlove0523.mybatis.started.entity.Inventory;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 
 public class ResultMapperGenerator {
     public static void main(String[] args) throws Exception{
-        Class<?> entityClazz = City.class;
+        Class<?> entityClazz = Inventory.class;
         String className = entityClazz.getSimpleName();
 
         List<String> lines = new ArrayList<>();

@@ -8,4 +8,15 @@
         <result property="countryId" column="country_id"/>
         <result property="lastUpdate" column="last_update"/>
     </resultMap>
+
+    <select id="selectNames" resultMap="cityResultMap">
+        SELECT *
+        FROM city
+        <where>
+            <foreach item="item" index="index" collection="list"
+                     open="city in (" separator="," close=")">
+                #{item}
+            </foreach>
+        </where>
+    </select>
 </mapper>
