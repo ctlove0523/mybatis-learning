@@ -6,7 +6,13 @@
 
     <groupId>io.github.ctlove0523</groupId>
     <artifactId>mybatis-learning</artifactId>
+    <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>mybatis</module>
+        <module>mybatis-spring-boot</module>
+        <module>mybatis-plus</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
