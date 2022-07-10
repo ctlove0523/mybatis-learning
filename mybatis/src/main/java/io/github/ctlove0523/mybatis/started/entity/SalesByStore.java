@@ -1,7 +1,5 @@
 package io.github.ctlove0523.mybatis.started.entity;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,17 +15,11 @@ import java.math.BigDecimal;
  */
 @Getter
 @Setter
-@TableName("sales_by_store")
 public class SalesByStore {
 
-    @TableField("store")
     private String store;
 
-    @TableField("manager")
     private String manager;
 
-    @TableField("total_sales")
     private BigDecimal totalSales;
-
-
 }

@@ -1,9 +1,5 @@
 package io.github.ctlove0523.mybatis.started.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,20 +15,13 @@ import java.time.LocalDateTime;
  */
 @Getter
 @Setter
-@TableName("store")
 public class Store {
 
-    @TableId(value = "store_id", type = IdType.AUTO)
     private Integer storeId;
 
-    @TableField("manager_staff_id")
     private Integer managerStaffId;
 
-    @TableField("address_id")
     private Integer addressId;
 
-    @TableField("last_update")
     private LocalDateTime lastUpdate;
-
-
 }

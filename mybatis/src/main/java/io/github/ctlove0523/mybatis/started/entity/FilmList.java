@@ -1,7 +1,5 @@
 package io.github.ctlove0523.mybatis.started.entity;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,32 +15,22 @@ import java.math.BigDecimal;
  */
 @Getter
 @Setter
-@TableName("film_list")
 public class FilmList {
 
-    @TableField("FID")
     private Integer fid;
 
-    @TableField("title")
     private String title;
 
-    @TableField("description")
     private String description;
 
-    @TableField("category")
     private String category;
 
-    @TableField("price")
     private BigDecimal price;
 
-    @TableField("length")
     private Integer length;
 
-    @TableField("rating")
     private String rating;
 
-    @TableField("actors")
     private String actors;
-
 
 }

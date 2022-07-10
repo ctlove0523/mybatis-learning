@@ -1,8 +1,5 @@
 package io.github.ctlove0523.mybatis.started.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import io.github.ctlove0523.mybatis.started.entity.Customer;
-
 /**
  * <p>
  *  Mapper 接口
@@ -11,6 +8,6 @@ import io.github.ctlove0523.mybatis.started.entity.Customer;
  * @author ctlove0523
  * @since 2022-07-05
  */
-public interface CustomerMapper extends BaseMapper<Customer> {
+public interface CustomerMapper  {
 
 }

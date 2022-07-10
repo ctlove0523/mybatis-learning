@@ -1,6 +1,5 @@
 package io.github.ctlove0523.mybatis.started.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import io.github.ctlove0523.mybatis.started.entity.City;
 
 import java.util.List;
@@ -13,7 +12,7 @@ import java.util.List;
  * @author ctlove0523
  * @since 2022-07-05
  */
-public interface CityMapper extends BaseMapper<City> {
+public interface CityMapper  {
 
     List<City> selectNames(List<String> names);
 }
