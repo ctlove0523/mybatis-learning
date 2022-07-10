@@ -22,13 +22,7 @@ public class SakilaApplication {
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);
 
         SqlSession sqlSession = sqlSessionFactory.openSession();
-        CityMapper cityMapper = sqlSession.getMapper(CityMapper.class);
-        List<City> cities = cityMapper.selectNames(Arrays.asList("Abha", "Acua"));
-        cities.forEach(new Consumer<City>() {
-            @Override
-            public void accept(City city) {
-                System.out.println(city.getCity());
-            }
-        });
+        ActorMapper actorMapper = sqlSession.getMapper(ActorMapper.class);
+        System.out.println(actorMapper.selectActor(1));
     }
 }
