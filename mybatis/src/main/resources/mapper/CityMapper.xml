@@ -9,6 +9,10 @@
         <result property="lastUpdate" column="last_update"/>
     </resultMap>
 
+    <select id="selectById" parameterType="int" resultMap="cityResultMap">
+        SELECT * FROM city WHERE city_id = #{cityId}
+    </select>
+
     <select id="selectNames" resultMap="cityResultMap">
         SELECT *
         FROM city
@@ -18,5 +22,9 @@
                 #{item}
             </foreach>
         </where>
+    </select>
+    
+    <select id="selectCityByRowBounds" resultMap="cityResultMap">
+        SELECT * FROM city;
     </select>
 </mapper>
