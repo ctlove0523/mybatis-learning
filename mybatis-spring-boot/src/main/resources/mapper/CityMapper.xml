@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.github.ctlove0523.mybatis.spring.db.mapper.CityMapper">
+
+    <resultMap id="cityResultMap" type="City">
+        <id property="cityId" column="city_id" />
+        <result property="city" column="city"/>
+        <result property="countryId" column="country_id"/>
+        <result property="lastUpdate" column="last_update"/>
+    </resultMap>
+
+    <select id="selectById" parameterType="int" resultMap="cityResultMap">
+        SELECT * FROM city WHERE city_id = #{cityId}
+    </select>
+
+    <select id="selectNames" resultMap="cityResultMap">
+        SELECT *
+        FROM city
+        <where>
+            <foreach item="item" index="index" collection="list"
+                     open="city in (" separator="," close=")">
+                #{item}
+            </foreach>
+        </where>
+    </select>
+    <select id="selectCityByRowBounds" resultMap="cityResultMap">
+        SELECT * FROM city;
+    </select>
+</mapper>

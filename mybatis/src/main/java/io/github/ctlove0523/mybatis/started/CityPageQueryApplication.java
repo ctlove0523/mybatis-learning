@@ -19,7 +19,7 @@ public class CityPageQueryApplication {
         SqlSession sqlSession = sqlSessionFactory.openSession();
 
         RowBounds rowBounds = new RowBounds(0, 10);
-        List<City> cities = sqlSession.selectList("io.github.ctlove0523.mybatis.started.mapper.CityMapper.selectCityByRowBounds", null, rowBounds);
+        List<City> cities = sqlSession.selectList("selectCityByRowBounds", null, rowBounds);
         System.out.println(cities.size());
 
     }
