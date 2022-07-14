@@ -22,4 +22,6 @@ public interface CityMapper {
     List<City> selectNames(List<String> names);
 
     List<City> selectCityByRowBounds();
+
+    Boolean existsById(@Param("cityId") Integer cityId);
 }

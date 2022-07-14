@@ -13,6 +13,10 @@
         SELECT * FROM city WHERE city_id = #{cityId}
     </select>
 
+    <select id="existsById" parameterType="int" resultType="Boolean">
+        SELECT (SELECT count(city_id) from city where city_id = #{cityId})>0
+    </select>
+
     <select id="selectNames" resultMap="cityResultMap">
         SELECT *
         FROM city
