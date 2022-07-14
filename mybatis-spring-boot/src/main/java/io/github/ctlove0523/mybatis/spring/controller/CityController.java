@@ -35,9 +35,9 @@ public class CityController {
         List<City> cities = sqlSession.selectList("selectCityByRowBounds", null, rowBounds);
         return ResponseEntity.ok(cities);
     }
-
-    @RequestMapping(value = "/api/city/exists/{id}", method = RequestMethod.GET)
-    public ResponseEntity<Boolean> exists(@PathVariable(name = "id") int id) {
-        return ResponseEntity.ok(cityMapper.existsById(id));
+    
+    @RequestMapping(value = "/api/city/exists/{city}", method = RequestMethod.GET)
+    public ResponseEntity<Boolean> existsByCity(@PathVariable(name = "city") String city) {
+        return ResponseEntity.ok(cityMapper.existsByCity(city));
     }
 }

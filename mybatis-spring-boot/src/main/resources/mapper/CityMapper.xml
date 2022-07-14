@@ -16,6 +16,9 @@
     <select id="existsById" parameterType="int" resultType="Boolean">
         SELECT (SELECT count(city_id) from city where city_id = #{cityId})>0
     </select>
+    <select id="existsByCity" parameterType="String" resultType="Boolean">
+        SELECT (SELECT count(city_id) from city where city = #{city})>0
+    </select>
 
     <select id="selectNames" resultMap="cityResultMap">
         SELECT *
